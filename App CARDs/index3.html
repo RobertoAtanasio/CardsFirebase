@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Atividade Aula</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="css/bootstrap.min.css"></script>
+	
+  </head>
+  
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+		<div class="navbar-header">
+      		<a class="navbar-brand" href="#">Cards</a>
+    	</div>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Cadastrar<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" id="listar" onclick="listarCards()">Listar</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div id="divAtualizando" class="alert alert-success">
+		    <strong>Aguarde</strong>, atualizando lista...
+		</div>
+	</div>
+
+	<div class="container">
+	  <div class="row" id="divCards">
+	  </div>
+	</div>
+
+	<div class="container">
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h4 class="modal-title">Cadastrar Card</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+			  <form action="/action_page.php">
+				<div class="form-group">
+				  <label for="inputUrl">URL</label><br>
+				  <input type="text" class="form-control" id="url" placeholder="Informe a URL da imagem">
+				  <br>
+				  <label for="textareaDescricao">Descrição</label>
+				  <textarea class="form-control" id="descricao" rows="3" placeholder="Informe a descrição da imagem"></textarea>
+				</div>
+			  </form>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal" id="cadastrar" onclick="cadastrarCard()">Salvar</button>
+			  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+			</div>
+		  </div>
+		 
+		</div>
+	  </div>
+	  
+	</div>
+
+	<div class="container">
+	  <!-- Modal -->
+	  <div class="modal fade" id="confirm" role="dialog">
+		<div class="modal-dialog modal-md">
+		  <div class="modal-content">
+			<div class="modal-body">
+			  <p>Confirma a exclusão deste Card?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-danger" id="delete" onclick="excluirCard()">Confirmar</button>
+				<button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+	</div>
+
+	<!-- Arquivos JS -->
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+	
+	<!-- <script src="js/jquery-3.2.1.js"></script> -->
+	<script src="js/popper.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+
+	<script src="js/main.js"></script>
+	<script src="js/scripts.js"></script>
+  
+</body>
+</html>
