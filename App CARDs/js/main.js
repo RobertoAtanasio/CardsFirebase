@@ -1,7 +1,7 @@
 
-// Initialize Firebase
+// Initialize Firebase. Ver pasta: C:\opt
 var config = {
-	apiKey: "AIzaSyDeQuEkf16Kn8wKINQIGeD7QE0KB-gPP9g",
+	apiKey: "...",
 	authDomain: "posunifacs-149ab.firebaseapp.com",
 	databaseURL: "https://posunifacs-149ab.firebaseio.com",
 	projectId: "posunifacs-149ab",
